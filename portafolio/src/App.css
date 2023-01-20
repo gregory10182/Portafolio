@@ -1,0 +1,229 @@
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.Dark{
+  color: #BCD5C1;
+  background-color: #15273B;
+}
+
+.Dark a{
+  color: #BCD5C1;
+  
+}
+
+.Dark button{
+  background-color: #BCD5C1;
+  color: #15273B;
+}
+
+
+
+.Light{
+  color: #242424;
+  background-color: #eee;
+}
+
+.Light a{
+  color: black;
+}
+
+.Light button{
+  background-color: #242424;
+}
+
+.Light button .themeIcon{
+  filter: invert(1);
+}
+
+
+.Light .MenuLine{
+  background-color: #242424;
+}
+
+.Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+
+.Navbar{
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  transition: 600ms;
+  padding: 0 20px;
+}
+
+
+.MenuResponsive{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 20%;
+}
+
+.MenuLine{
+  display: block;
+  height: 5px;
+  margin: 5px 0 2px;
+  width: 33px;
+  border-radius: 2px;
+  background-color: #bdd29b;
+  transition: 600ms;
+  transform-origin: right center;
+}
+
+.Navigation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease;
+}
+
+.NavbarActive{
+  display: flex;
+  margin: 0;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 0 20px;
+  transition: 500ms;
+}
+
+.NavbarActive .Navigation{
+  visibility: visible;
+  opacity: 1;
+}
+
+.NavbarActive .MenuLine:nth-child(2){
+  visibility: hidden;
+  transition: 10ms;
+}
+
+.NavbarActive .MenuLine:nth-child(1){
+  rotate: 50deg;
+  transform: translate(13px, 25px);
+}
+
+.NavbarActive .MenuLine:nth-child(3){
+  rotate: -50deg;
+  transform: translate(11px, -23px);
+}
+
+.themeIcon{
+  height: 10px;
+  width: 10px;
+}
+
+.Presentacion{
+  padding: 0px 20px;
+}
+
+.Presentacion h1{
+  width: 100%;
+  font-size: 30px;
+  text-align: left;
+}
+
+
+
+.Presentacion h3{
+  text-align: left;
+}
+
+.Presentacion p{
+  font-size: 16px;
+  text-align: left;
+}
+
+
+.aboutMe{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  flex-wrap: wrap;
+}
+
+.aboutMe h1{
+  width: 100%;
+  font-size: 20px;
+}
+
+.aboutMe p{
+  width: 100%;
+  font-size: 18px;
+}
+
+.aboutMe .CV{
+  height: 40px;
+  width: 150px;
+}
+
+
+
+/* techstack */
+
+.TechStack{
+  display: flex;
+  padding: 0px 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  height: 350px;
+}
+
+.TechStack .Technology{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #144D2B;
+  border-radius: 25%;
+  width: 80px;
+  height: 80px;
+}
+
+.Technology img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.Technology p{
+  width: 100%;
+  margin: 0px 0px;
+  font-size: 13px;
+}
