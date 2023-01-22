@@ -33,20 +33,8 @@ export default function TechStack() {
         tech="MongoDB"
       />
       <Technology
-        source="https://img.icons8.com/color/2x/postgreesql.png"
-        tech="PostgreSQL"
-      />
-      <Technology
-        source="https://img.icons8.com/color/2x/python--v2.png"
-        tech="Python"
-      />
-      <Technology
         source="https://img.icons8.com/color/2x/git.png"
         tech="Git"
-      />
-      <Technology
-        source="https://img.icons8.com/material-rounded/2x/github.png"
-        tech="Github"
       />
       <Technology
         source="https://img.icons8.com/ios-filled/2x/console.png"
