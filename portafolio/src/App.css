@@ -148,16 +148,22 @@ html{
   padding: 0px 20px;
 }
 
+.Presentacion .Name{
+  color: #00E0D9;
+  margin: 8px 0px;
+}
+
 .Presentacion h1{
   width: 100%;
   font-size: 30px;
+  margin: 8px 0px;
   text-align: left;
 }
 
-
-
 .Presentacion h3{
   text-align: left;
+  font-size: 17px;
+  margin: 8px 0px;
 }
 
 .Presentacion p{
