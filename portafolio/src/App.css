@@ -211,8 +211,33 @@ html{
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+  width: 90%;
+  height: auto;
+}
+
+.TechStack .Stack{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
   width: 100%;
-  height: 350px;
+}
+
+.TechStack .Selector{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50px;
+}
+
+.Selector .selection{
+  background-color: #15273B;
+  color: #CED1DF;
+  height: 50px;
+  width: 40%;
+  border-bottom: 2px solid #CED1DF;
+  border-radius: 0;
 }
 
 .TechStack .Technology{

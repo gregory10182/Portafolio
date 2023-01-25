@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function Technology({ source, tech }) {
+export default function Technology({ source, tech, variants}) {
 
   const [hover, sethover] = useState(false)
 
@@ -24,6 +24,7 @@ export default function Technology({ source, tech }) {
         duration: 0.7,
         ease: "easeInOut",
       }}
+      variants={variants}
     >
       <motion.img 
         src={source}
