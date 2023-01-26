@@ -29,7 +29,7 @@ export default function Presentacion() {
       scale: 1,
       x: 0,
       transition: {
-        duration: 0.7
+        duration: 0.5
       },
     },
   };
@@ -41,7 +41,7 @@ export default function Presentacion() {
         initial="offScreen"
         animate="onScreen"
         transition={{
-          staggerChildren: 0.1
+          staggerChildren: 0.08
         }}
       >
         {"Hi, my name is".split("").map((letter, i) => {
@@ -57,8 +57,8 @@ export default function Presentacion() {
         initial="offScreen"
         animate="onScreen"
         transition={{
-          staggerChildren: 0.1,
-          delayChildren: 1.5,
+          staggerChildren: 0.08,
+          delayChildren: 1.2,
         }}
       >
         {"Gregory Pérez F.".split("").map((letter, i) => {
@@ -66,6 +66,7 @@ export default function Presentacion() {
             <motion.span key={letter + "-" + i} variants={writtinganimation}>
               {letter}
             </motion.span>
+            
           );
         })}
       </motion.h1>
@@ -73,8 +74,8 @@ export default function Presentacion() {
         initial="offScreen"
         animate="onScreen"
         transition={{
-          staggerChildren: 0.1,
-          delayChildren: 3.2,
+          staggerChildren: 0.08,
+          delayChildren: 2.8,
         }}
       >
         {"Software Engineer".split("").map((letter, i) => {
@@ -89,8 +90,8 @@ export default function Presentacion() {
         initial="offScreen"
         animate="onScreen"
         transition={{
-          staggerChildren: 0.08,
-          delayChildren: 5,
+          staggerChildren: 0.05,
+          delayChildren: 4.5,
         }}
       >
         {"Im a recently graduated software engineer web development oriented and passioned for the internet of things"
@@ -109,7 +110,7 @@ export default function Presentacion() {
         animate="onScreen"
         transition={{
           staggerChildren: 0.2,
-          delayChildren: 13.5
+          delayChildren: 9.8
         }}
       >
         <motion.img

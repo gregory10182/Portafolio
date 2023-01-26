@@ -30,10 +30,12 @@ export default function Navbar() {
           className="MenuLine"
           variants={{
             open: {
-              rotate: -48,
+              rotate: 48,
+              transformOrigin: "left"
             },
             closed: {
               rotate: 0,
+              transformOrigin: "left"
             },
           }}
           animate={visible ? "open" : "closed"}
@@ -47,14 +49,17 @@ export default function Navbar() {
           variants={{
             open: {
               scaleX: 0,
+              transformOrigin: "left"
             },
             closed: {
               scaleX: 1,
+              transformOrigin: "left"
             },
           }}
           animate={visible ? "open" : "closed"}
           transition={{
             duration: visible ? 0.1 : 0.4,
+            
           }}
         />
 
@@ -62,10 +67,12 @@ export default function Navbar() {
           className="MenuLine"
           variants={{
             open: {
-              rotate: 48,
+              rotate: -48,
+              transformOrigin: "left"
             },
             closed: {
               rotate: 0,
+              transformOrigin: "left"
             },
           }}
           animate={visible ? "open" : "closed"}
@@ -89,9 +96,9 @@ export default function Navbar() {
               },
             }}
             key="sideNavBar"
-            initial={{ x: 140 }}
+            initial={{ x: -140 }}
             animate={"open"}
-            exit={{ x: 140, opacity: 0}}
+            exit={{ x: -140, opacity: 0}}
             transition={{
               duration: 0.5,
               // delay: visible ? 0.4 : 0,

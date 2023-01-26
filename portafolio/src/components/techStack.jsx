@@ -27,13 +27,13 @@ export default function TechStack() {
   const staggerTech = {
     offScreen:{
       opacity: 0,
-      x: 100,
+      y: 50
     },
     onScreen:{
       opacity: 1,
-      x: 0,
+      y: 0,
       transition:{
-        duration: 0.5
+        duration: 0.3,
       }
     }
   }
@@ -85,7 +85,7 @@ export default function TechStack() {
             initial="offScreen"
             animate="onScreen"
             transition={{
-              staggerChildren: 0.5
+              staggerChildren: 0.2
             }}
           >
             <Technology
@@ -119,7 +119,7 @@ export default function TechStack() {
             initial="offScreen"
             animate="onScreen"
             transition={{
-              staggerChildren: 0.5
+              staggerChildren: 0.2
             }}
           >
             <Technology
@@ -148,7 +148,7 @@ export default function TechStack() {
             initial="offScreen"
             animate="onScreen"
             transition={{
-              staggerChildren: 0.5
+              staggerChildren: 0.2
             }}
           >
             <Technology
