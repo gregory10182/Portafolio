@@ -15,7 +15,8 @@ export default function Navbar({ setTheme, setLanguage }) {
     const language = localStorage.getItem('lang')
 
     if(!language){
-      setLang("en")
+      setLang("en");
+      localStorage.setItem('lang', "en");
     }
     else{
       setLang(language)
@@ -153,7 +154,7 @@ export default function Navbar({ setTheme, setLanguage }) {
                 
               }}
             >
-              {lang === 'en' ? 'en' : 'es'}
+              {lang === 'en' ? 'es' : 'en'}
             </button>
           </motion.div>
         )}

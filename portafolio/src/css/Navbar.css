@@ -63,6 +63,14 @@
 }
 
 
+.Navigation button{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px ;
+  border-radius: 50%;
+}
+
+
 .themeIcon{
   height: 10px;
   width: 10px;
@@ -101,6 +109,7 @@
 
 .Light .Navigation button{
     background-color: #15273B;
+    color: #E6E8EF;
 }
 
 .Light .Navigation .themeIcon{

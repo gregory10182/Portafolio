@@ -24,9 +24,9 @@ export default function Container(){
         <div  className="Container">
             <Navbar setTheme={changetheme} setLanguage={languageState}/>
             <Presentacion lang={language}/>
-            <AboutMe/>
-            <TechStack theme={Dark}/>
-            <Proyectos/>
+            <AboutMe lang={language}/>
+            <TechStack theme={Dark} lang={language}/>
+            <Proyectos lang={language}/>
         </div>
     )
 }

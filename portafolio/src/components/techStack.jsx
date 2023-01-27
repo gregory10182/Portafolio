@@ -4,11 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import '../css/TechStack.css'
 
-export default function TechStack({ theme }) {
+export default function TechStack({ theme, lang }) {
 
   const [selected, setSelected] = useState("frontend")
-
-  const MotionTechnology = motion(Technology)
 
   const select = {
     notSelected: {
@@ -74,7 +72,7 @@ export default function TechStack({ theme }) {
             setSelected("otros")
           }}
         >
-          Otros
+          {lang === 'en' ? 'Others' : 'Otros'}
         </motion.button>
       </div>
 

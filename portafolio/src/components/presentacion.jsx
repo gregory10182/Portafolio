@@ -3,18 +3,17 @@ import { motion } from "framer-motion";
 import "../css/Presentation.css";
 
 export default function Presentacion({ lang }) {
-  const writtinganimation = {
+
+  const Apresentation = {
     offScreen: {
       opacity: 0,
-      scale: 0,
-      y: 50,
+      x: -100,
     },
     onScreen: {
       opacity: 1,
-      scale: 1,
-      y: 0,
+      x: 0,
       transition: {
-        duration: 0.01,
+        duration: 1,
       },
     },
   };
@@ -23,108 +22,56 @@ export default function Presentacion({ lang }) {
     offScreen: {
       opacity: 0,
       scale: 0,
-      x: 300,
+      x: -100,
     },
     onScreen: {
       opacity: 1,
       scale: 1,
       x: 0,
       transition: {
-        duration: 0.5,
+        duration: 1,
       },
     },
   };
 
   return (
-    <motion.div className="Presentacion">
+    <motion.div 
+      className="Presentacion"
+      initial="offScreen"
+      whileInView="onScreen"
+      transition={{
+        staggerChildren: 1,
+      }}
+    >
       <motion.h3
-        initial="offScreen"
-        animate="onScreen"
-        transition={{
-          staggerChildren: 0.08,
-        }}
+        variants={Apresentation}
       >
-        {lang === "en"
-          ? "Hi, my name is"
-          : "Hola, mi nombre es".split("").map((letter, i) => {
-              return (
-                <motion.span
-                  key={letter + "-" + i}
-                  variants={writtinganimation}
-                >
-                  {letter}
-                </motion.span>
-              );
-            })}
+       {lang === 'en' ? "Hi, my name is" : "Hola, mi nombre es"}
       </motion.h3>
       <motion.h1
         className="Name"
-        initial="offScreen"
-        animate="onScreen"
-        transition={{
-          staggerChildren: 0.08,
-          delayChildren: 1.2,
-        }}
+        variants={Apresentation}
       >
-        {"Gregory Pérez F.".split("").map((letter, i) => {
-          return (
-            <motion.span key={letter + "-" + i} variants={writtinganimation}>
-              {letter}
-            </motion.span>
-          );
-        })}
+       Gregory Pérez F.
       </motion.h1>
       <motion.h1
-        initial="offScreen"
-        animate="onScreen"
-        transition={{
-          staggerChildren: 0.08,
-          delayChildren: 2.8,
-        }}
+        variants={Apresentation}
       >
-        {lang === "en"
-          ? "Software Engineer"
-          : "Ingeniero de Software".split("").map((letter, i) => {
-              return (
-                <motion.span
-                  key={letter + "-" + i}
-                  variants={writtinganimation}
-                >
-                  {letter}
-                </motion.span>
-              );
-            })}
+        {lang === 'en' ? "Software Engineer" : "Ingeniero de Software"}
       </motion.h1>
       <motion.p
-        initial="offScreen"
-        animate="onScreen"
-        transition={{
-          staggerChildren: 0.05,
-          delayChildren: 4.5,
-        }}
+        variants={Apresentation}
       >
-        {lang === "en"
-          ? "Im a recently graduated software engineer web development oriented and passioned for the internet of things"
-          : "Soy un estudiante recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)"
-              .split("")
-              .map((letter, i) => {
-                return (
-                  <motion.span
-                    key={letter + "-" + i}
-                    variants={writtinganimation}
-                  >
-                    {letter}
-                  </motion.span>
-                );
-              })}
+        {lang === 'en' ? "Im a recently graduated software engineer web development oriented and passioned for the internet of things" : "Recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)"}
       </motion.p>
       <motion.div
         className="contacts"
         initial="offScreen"
-        animate="onScreen"
+        whileInView="onScreen"
         transition={{
-          staggerChildren: 0.2,
-          delayChildren: 9.8,
+          staggerChildren: 0.5,
+          staggerDirection: -1,
+          delayChildren: 3.5,
         }}
       >
         <motion.img
@@ -148,4 +95,130 @@ export default function Presentacion({ lang }) {
       </motion.div>
     </motion.div>
   );
+
+  // if (lang === "en") {
+  //   return (
+  //     <motion.div 
+  //       className="Presentacion"
+  //       initial="offScreen"
+  //       whileInView="onScreen"
+  //       transition={{
+  //         staggerChildren: 1,
+  //       }}
+  //     >
+  //       <motion.h3
+  //         variants={Apresentation}
+  //       >
+  //         Hi, my name is
+  //       </motion.h3>
+  //       <motion.h1
+  //         className="Name"
+  //         variants={Apresentation}
+  //       >
+  //        Gregory Pérez F.
+  //       </motion.h1>
+  //       <motion.h1
+  //         variants={Apresentation}
+  //       >
+  //         Software Engineer
+  //       </motion.h1>
+  //       <motion.p
+  //         variants={Apresentation}
+  //       >
+  //         Im a recently graduated software engineer web development oriented and passioned for the internet of things
+  //       </motion.p>
+  //       <motion.div
+  //         className="contacts"
+  //         initial="offScreen"
+  //         whileInView="onScreen"
+  //         transition={{
+  //           staggerChildren: 0.5,
+  //           staggerDirection: -1,
+  //           delayChildren: 3.5,
+  //         }}
+  //       >
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/512/3800/3800073.png"
+  //           alt=""
+  //         />
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/512/1240/1240971.png"
+  //           alt=""
+  //         />
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/128/1944/1944250.png"
+  //           alt=""
+  //         />
+  //       </motion.div>
+  //     </motion.div>
+  //   );
+  // }
+
+  // if (lang === "es") {
+  //   return (
+  //     <motion.div 
+  //       className="Presentacion"
+  //       initial="offScreen"
+  //       whileInView="onScreen"
+  //       transition={{
+  //         staggerChildren: 0.08,
+  //       }}
+  //     >
+  //       <motion.h3
+  //         variants={Apresentation}
+  //       >
+  //         Hola, mi nombre es
+  //       </motion.h3>
+  //       <motion.h1
+  //         variants={Apresentation}
+  //       >
+  //         Gregory Pérez F.
+  //       </motion.h1>
+  //       <motion.h1
+  //         variants={Apresentation}
+  //       >
+  //         Ingeniero de Software
+  //       </motion.h1>
+  //       <motion.p
+  //         variants={Apresentation}
+  //       >
+  //         Recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)
+  //       </motion.p>
+  //       <motion.div
+  //         className="contacts"
+  //         initial="offScreen"
+  //         animate="onScreen"
+  //         transition={{
+  //           staggerChildren: 0.2,
+  //           delayChildren: 9.8,
+  //         }}
+  //       >
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/512/3800/3800073.png"
+  //           alt=""
+  //         />
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/512/1240/1240971.png"
+  //           alt=""
+  //         />
+  //         <motion.img
+  //           className="contact"
+  //           variants={logosanimation}
+  //           src="https://cdn-icons-png.flaticon.com/128/1944/1944250.png"
+  //           alt=""
+  //         />
+  //       </motion.div>
+  //     </motion.div>
+  //   );
+  // }
 }
