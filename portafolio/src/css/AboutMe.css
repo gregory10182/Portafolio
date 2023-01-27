@@ -1,0 +1,47 @@
+.aboutMe h1{
+    width: 100%;
+    font-size: 26px;
+  }
+  
+  .aboutMe p{
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .aboutMe .CV{
+    height: 40px;
+    width: 130px;
+}
+
+
+/* Dark */
+
+
+.Dark .aboutMe h1{
+    color: #CED1DF;
+}
+
+.Dark .aboutMe p{
+    color: #B5BACF;
+}
+
+.Dark .aboutMe .CV{
+    background-color: #DADCE7;
+    color: #15273B;
+}
+
+
+/* Light */
+
+.Light .aboutMe h1{
+    color: #15273B;
+}
+
+.Light .aboutMe p{
+    color: #203b5b;
+}
+
+.Light .aboutMe .CV{
+    background-color: #15273B;
+    color: #DADCE7;
+}

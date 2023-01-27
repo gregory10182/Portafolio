@@ -3,24 +3,30 @@ import Navbar from "./navbar";
 import Presentacion from "./presentacion";
 import AboutMe from "./aboutMe";
 import TechStack from "./techStack";
-
+import Proyectos from "./proyectos";
 
 
 
 export default function Container(){
 
-    const [Dark, setDark] = useState(true)
+    const [Dark, setDark] = useState(true);
+    const [language, setLanguage] = useState();
 
-    const changeColor = (state) => {
-        setDark(state)
+    const changetheme = (state) => {
+        setDark(state);
+    }
+
+    const languageState = (state) => {
+        setLanguage(state);
     }
 
     return(
         <div  className="Container">
-            <Navbar darkState={Dark} setState={changeColor} />
-            <Presentacion/>
+            <Navbar setTheme={changetheme} setLanguage={languageState}/>
+            <Presentacion lang={language}/>
             <AboutMe/>
-            <TechStack/>
+            <TechStack theme={Dark}/>
+            <Proyectos/>
         </div>
     )
 }

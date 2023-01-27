@@ -1,7 +1,8 @@
 import React from "react";
-import { animate, delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import "../css/Presentation.css";
 
-export default function Presentacion() {
+export default function Presentacion({ lang }) {
   const writtinganimation = {
     offScreen: {
       opacity: 0,
@@ -29,7 +30,7 @@ export default function Presentacion() {
       scale: 1,
       x: 0,
       transition: {
-        duration: 0.5
+        duration: 0.5,
       },
     },
   };
@@ -37,20 +38,24 @@ export default function Presentacion() {
   return (
     <motion.div className="Presentacion">
       <motion.h3
-        // variants={staggeranimation}
         initial="offScreen"
         animate="onScreen"
         transition={{
-          staggerChildren: 0.08
+          staggerChildren: 0.08,
         }}
       >
-        {"Hi, my name is".split("").map((letter, i) => {
-          return (
-            <motion.span key={letter + "-" + i} variants={writtinganimation}>
-              {letter}
-            </motion.span>
-          );
-        })}
+        {lang === "en"
+          ? "Hi, my name is"
+          : "Hola, mi nombre es".split("").map((letter, i) => {
+              return (
+                <motion.span
+                  key={letter + "-" + i}
+                  variants={writtinganimation}
+                >
+                  {letter}
+                </motion.span>
+              );
+            })}
       </motion.h3>
       <motion.h1
         className="Name"
@@ -66,7 +71,6 @@ export default function Presentacion() {
             <motion.span key={letter + "-" + i} variants={writtinganimation}>
               {letter}
             </motion.span>
-            
           );
         })}
       </motion.h1>
@@ -78,13 +82,18 @@ export default function Presentacion() {
           delayChildren: 2.8,
         }}
       >
-        {"Software Engineer".split("").map((letter, i) => {
-          return (
-            <motion.span key={letter + "-" + i} variants={writtinganimation}>
-              {letter}
-            </motion.span>
-          );
-        })}
+        {lang === "en"
+          ? "Software Engineer"
+          : "Ingeniero de Software".split("").map((letter, i) => {
+              return (
+                <motion.span
+                  key={letter + "-" + i}
+                  variants={writtinganimation}
+                >
+                  {letter}
+                </motion.span>
+              );
+            })}
       </motion.h1>
       <motion.p
         initial="offScreen"
@@ -94,15 +103,20 @@ export default function Presentacion() {
           delayChildren: 4.5,
         }}
       >
-        {"Im a recently graduated software engineer web development oriented and passioned for the internet of things"
-          .split("")
-          .map((letter, i) => {
-            return (
-              <motion.span key={letter + "-" + i} variants={writtinganimation}>
-                {letter}
-              </motion.span>
-            );
-          })}
+        {lang === "en"
+          ? "Im a recently graduated software engineer web development oriented and passioned for the internet of things"
+          : "Soy un estudiante recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)"
+              .split("")
+              .map((letter, i) => {
+                return (
+                  <motion.span
+                    key={letter + "-" + i}
+                    variants={writtinganimation}
+                  >
+                    {letter}
+                  </motion.span>
+                );
+              })}
       </motion.p>
       <motion.div
         className="contacts"
@@ -110,7 +124,7 @@ export default function Presentacion() {
         animate="onScreen"
         transition={{
           staggerChildren: 0.2,
-          delayChildren: 9.8
+          delayChildren: 9.8,
         }}
       >
         <motion.img

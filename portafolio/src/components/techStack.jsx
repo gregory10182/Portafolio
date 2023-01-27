@@ -2,8 +2,9 @@ import React from "react";
 import Technology from "./technology";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import '../css/TechStack.css'
 
-export default function TechStack() {
+export default function TechStack({ theme }) {
 
   const [selected, setSelected] = useState("frontend")
 
@@ -11,12 +12,12 @@ export default function TechStack() {
 
   const select = {
     notSelected: {
-      color: "#CED1DF",
-      borderBottom: "2px solid #CED1DF"
+      color: theme ? "#CED1DF" : "#15273B",
+      borderBottom:  theme ? "2px solid #CED1DF" : "2px solid #15273B"
     },
     selected: {
-      color: "#00E0D9",
-      borderBottom: "5px solid #00E0D9"
+      color: theme ? "#00E0D9" : "#305988",
+      borderBottom: theme ? "5px solid #00E0D9" : "5px solid #305988"
     },
     transition: {
       duration: 0.4,

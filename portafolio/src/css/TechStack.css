@@ -1,0 +1,116 @@
+.TechStack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    padding: 200px 0px;
+    height: auto;
+}
+
+.TechStack .Stack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+}
+
+.TechStack .Selector {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 50px;
+}
+
+.Selector .selection {
+    height: 50px;
+    width: 40%;
+    border-radius: 0;
+}
+
+.TechStack .Technology {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.Technology img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.Technology p {
+    visibility: hidden;
+    position: absolute;
+    font-weight: 600;
+    line-height: 20px;
+    border-radius: 5px;
+    bottom: 70px;
+    padding: 5px 10px;
+    width: 100%;
+    font-size: 13px;
+}
+
+.Technology p::after {
+    content: "";
+    display: block;
+    border-top: 10px solid #00E0D9;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    bottom: -7px;
+    left: calc(50% - 10px);
+}
+
+
+/* Dark */
+
+.Dark .TechStack .selection {
+    background-color: #15273B;
+    color: #DADCE7;
+    border-bottom: 2px solid #CED1DF;
+}
+
+.Dark .TechStack .Technology{
+    border: 4px solid #00E0D9;
+}
+
+.Dark .TechStack .Technology p{
+    background: #00E0D9;
+    color: #15273B;
+}
+
+.Dark .TechStack .Technology p::after{
+    border-top: 10px solid #00E0D9;
+}
+
+
+
+/* Light */
+
+.Light .TechStack .selection {
+    background-color: #DADCE7;
+    color: #15273B;
+    border-bottom: 2px solid #CED1DF;
+}
+
+.Light .TechStack .Technology{
+    border: 4px solid #305988;
+}
+
+.Light .TechStack .Technology p{
+    background: #305988;
+    color: #DADCE7;
+}
+
+.Light .TechStack .Technology p::after{
+    border-top: 10px solid #305988;
+}

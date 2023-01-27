@@ -1,23 +1,40 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import '../css/Navbar.css'
 
-export default function Navbar() {
-  const [darkTheme, setDarkTheme] = useState(true);
+export default function Navbar({ setTheme, setLanguage }) {
+  const [darkTheme, setDarkTheme] = useState();
   const [visible, setVisible] = useState(false);
+  const [lang, setLang] = useState()
 
   useEffect(() => {
-    document.body.className = (darkTheme && "Dark") || "Light";
-    console.log(darkTheme);
+    const ThemeState = localStorage.getItem("theme") === "true";
+    setDarkTheme(ThemeState);
+
+    const language = localStorage.getItem('lang')
+
+    if(!language){
+      setLang("en")
+    }
+    else{
+      setLang(language)
+    }
+  }, []);
+
+  useEffect(() => {
+    document.body.className = darkTheme ? "Dark" : "Light";
+    setTheme(darkTheme);
   }, [darkTheme]);
 
   useEffect(() => {
-    console.log(visible);
-  }, [visible]);
+    setLanguage(lang);
+  }, [lang]);
+
+  
 
   return (
     <div
-      // className={visible === true ? "NavbarActive" : "Navbar"}
       className="Navbar"
     >
       <div
@@ -105,21 +122,38 @@ export default function Navbar() {
             }}
           >
             <nav>
-              <a href="#">About</a>
-              <a href="#">Experience</a>
-              <a href="#">Work</a>
-              <a href="#">Contact</a>
+              <a href="#">{lang === 'en' ? 'About' : 'Sobre Mi'}</a>
+              <a href="#">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
+              <a href="#">{lang === 'en' ? 'Work' : 'Trabajo'}</a>
+              <a href="#">{lang === 'en' ? 'Contact' : 'Contacto'}</a>
             </nav>
             
             <button
               onClick={() => {
                 setDarkTheme(!darkTheme);
+                localStorage.setItem('theme', !darkTheme)
               }}
             >
               <img
                 className="themeIcon"
-                src="https://cdn-icons-png.flaticon.com/512/2710/2710646.png"
+                src={ darkTheme ? "https://cdn-icons-png.flaticon.com/512/66/66275.png" : "https://cdn-icons-png.flaticon.com/512/4489/4489231.png"}
               ></img>
+            </button>
+
+            <button
+              onClick={() => {
+                if(lang === 'en'){
+                  setLang('es')
+                  localStorage.setItem('lang', 'es')
+                }
+                else{
+                  setLang('en')
+                  localStorage.setItem('lang', 'en')
+                }
+                
+              }}
+            >
+              {lang === 'en' ? 'en' : 'es'}
             </button>
           </motion.div>
         )}

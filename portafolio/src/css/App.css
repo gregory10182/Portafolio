@@ -1,0 +1,85 @@
+html{
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.Dark{
+  background-color: #15273B;
+}
+
+
+.Light{
+  background-color: #DADCE7;
+}
+
+
+.Container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.aboutMe{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+  flex-wrap: wrap;
+}
+
+
+
+
+
+
+.Proyectos{
+  width: 90%;
+  height: 300px;
+  margin: 150px 0px;
+}
+
+
+.Proyecto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+  background-color: #203b5b;
+  border-radius: 5%;
+  padding: 5px;
+}
+
+
+.Proyecto h2{
+  width: 100%;
+}
+
+.Proyecto .logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  background-color: #00E0D9;
+}
+
+.logo img{
+  height: 200px;
+}
