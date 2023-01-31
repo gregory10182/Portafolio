@@ -20,11 +20,11 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  height: 200px;
+  height: 350px;
   width: 100%;
   background-color: #203b5b;
   border-radius: 10%;
-  padding: 20px;
+  padding: 10px;
 }
 
 
@@ -32,6 +32,66 @@
   width: 100%;
   text-align: center;
 }
+
+.Project p{
+  width: 100%;
+  margin: 0;
+}
+
+.Project .Technologies{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 50px;
+}
+
+.Project .Technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.Project .Technology img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+
+.Project .Technology .tooltip {
+  opacity: 0;
+  position: absolute;
+  font-weight: 600;
+  border-radius: 5px;
+  bottom: 48px;
+  padding: 0px 5px;
+  width: 100%;
+  font-size: 9px;
+}
+
+.Project .Technology .tooltip p{
+  margin: 0px;
+  text-align: center;
+}
+
+.Project .Links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  height: 40px;
+}
+
+.Project .Links img{
+  height: 20px;
+  width: 20px;
+}
+
 
 
 
@@ -49,6 +109,26 @@
   color: #B5BACF;
 }
 
+.Dark .Project .Technology{
+  border: 3px solid #00E0D9;
+}
+
+.Dark .Project .Technology .tooltip{
+  background: #00E0D9;
+}
+
+.Dark .Project .Technology .tooltip p{
+  color: #15273B;
+}
+
+.Dark .Project .Technology .tooltip::after{
+  border-top: 10px solid #00E0D9;
+}
+
+.Dark .Links img {
+  filter: invert(92%) sepia(12%) saturate(325%) hue-rotate(196deg) brightness(91%) contrast(91%);
+}
+
 
 /* Light */
 
@@ -60,12 +140,28 @@
   color: #15273B;
 }
 
+.Light .Project .Technology{
+  border: 3px solid #305988;
+}
+
+.Light .Project .Technology .tooltip{
+  background: #305988;
+  color: #DADCE7;
+}
+
+.Light .Project .Technology .tooltip::after{
+  border-top: 10px solid #305988;
+}
+
+.Light .Links img {
+  filter: invert(17%) sepia(15%) saturate(3224%) hue-rotate(176deg) brightness(92%) contrast(84%);
+}
 
 
 @media only screen and (min-width: 768px) {
 
   .Project{
-    width: 500px;
+    width: 350px;
   }
 }
 
