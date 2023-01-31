@@ -1,15 +1,21 @@
 html{
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+}
+
+body{
+  display: flex;
+  justify-content: center;
 }
 
 #root {
   display: flex;
   justify-content: center;
-  margin: 0;
+  align-items: center;
+  margin: 0px 25px;
   width: 100%;
   height: 100%;
-  text-align: center;
 }
 
 .Dark{
@@ -36,42 +42,29 @@ html{
 
 
 
+@media only screen and (min-width: 768px) {
+
+  #root{
+    margin: 0px 70px;
+  }
 
 
-.Proyectos{
-  width: 90%;
-  height: 300px;
-  margin: 150px 0px;
 }
 
+@media only screen and (min-width: 1024px) {
 
-.Proyecto{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  height: 300px;
-  width: 100%;
-  background-color: #203b5b;
-  border-radius: 5%;
-  padding: 5px;
+  #root{
+    margin: 0px 140px;
+  }
+
+
 }
 
+@media only screen and (min-width: 1440px) {
 
-.Proyecto h2{
-  width: 100%;
-}
+  #root{
+    margin: 0px 210px;
+  }
 
-.Proyecto .logo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 220px;
-  width: 220px;
-  border-radius: 50%;
-  background-color: #00E0D9;
-}
 
-.logo img{
-  height: 200px;
 }

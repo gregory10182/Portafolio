@@ -11,10 +11,11 @@
 .TechStack .Stack {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    margin-top: 20px;
     gap: 10px;
-    width: 90%;
+    width: 100%;
 }
 
 .TechStack .Selector {
@@ -47,19 +48,23 @@
     object-fit: cover;
 }
 
-.Technology p {
-    visibility: hidden;
+.Technology .tooltip {
+    opacity: 0;
     position: absolute;
     font-weight: 600;
-    line-height: 20px;
     border-radius: 5px;
-    bottom: 70px;
+    bottom: 90px;
     padding: 5px 10px;
     width: 100%;
     font-size: 13px;
 }
 
-.Technology p::after {
+.Technology .tooltip p{
+    margin: 0px;
+    text-align: center;
+}
+
+.Technology .tooltip::after {
     content: "";
     display: block;
     border-top: 10px solid #00E0D9;
@@ -83,12 +88,17 @@
     border: 4px solid #00E0D9;
 }
 
-.Dark .TechStack .Technology p{
+.Dark .TechStack .Technology .tooltip{
     background: #00E0D9;
+}
+
+.Dark .TechStack .Technology .tooltip p{
     color: #15273B;
 }
 
-.Dark .TechStack .Technology p::after{
+
+
+.Dark .TechStack .Technology .tooltip::after{
     border-top: 10px solid #00E0D9;
 }
 
@@ -106,11 +116,67 @@
     border: 4px solid #305988;
 }
 
-.Light .TechStack .Technology p{
+.Light .TechStack .Technology .tooltip{
     background: #305988;
     color: #DADCE7;
 }
 
-.Light .TechStack .Technology p::after{
+.Light .TechStack .Technology .tooltip::after{
     border-top: 10px solid #305988;
 }
+
+
+@media only screen and (min-width: 768px) {
+    
+    .TechStack .Technology {
+        width: 85px;
+        height: 85px;
+    }
+
+    .Technology .tooltip{
+        bottom: 94px;
+    }
+  }
+
+
+  @media only screen and (min-width: 1024px) {
+    
+    .TechStack .Technology {
+        width: 90px;
+        height: 90px;
+    }
+
+    .Technology .tooltip{
+        bottom: 98px;
+    }
+  
+  }
+
+
+  @media only screen and (min-width: 1440px) {
+    
+    .TechStack .Technology {
+        width: 95px;
+        height: 95px;
+    }
+
+    .Technology .tooltip{
+        bottom: 103px;
+    }
+  
+  }
+
+
+  @media only screen and (min-width: 1920px) {
+    
+    .TechStack .Technology {
+        width: 100px;
+        height: 100px;
+    }
+
+    .Technology .tooltip{
+        bottom: 108px;
+    }
+  
+  }
+

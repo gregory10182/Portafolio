@@ -1,0 +1,93 @@
+.Projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  height: auto;
+  margin: 150px 0px;
+}
+
+.Projects h1 {
+  width: 100%;
+  font-size: clamp(28px, 3.5vw, 41px);
+  text-align: center;
+}
+
+
+.Project {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  height: 200px;
+  width: 100%;
+  background-color: #203b5b;
+  border-radius: 10%;
+  padding: 20px;
+}
+
+
+.Project h2 {
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* Dark */
+
+.Dark .Project {
+  background-color: #203b5b;
+}
+
+.Dark .Project h2 {
+  color: #00E0D9;
+}
+
+.Dark .Project p {
+  color: #B5BACF;
+}
+
+
+/* Light */
+
+.Light .Project {
+  background-color: #E6E8EF;
+}
+
+.Light .Project {
+  color: #15273B;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .Project{
+    width: 500px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .Project{
+    width: 300px;
+  }
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+  .Project{
+    width: 250px;
+  }
+}
+
+
+@media only screen and (min-width: 1920px) {
+
+  .Project{
+    width: 350px;
+  }
+}

@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import Presentacion from "./presentacion";
 import AboutMe from "./aboutMe";
 import TechStack from "./techStack";
-import Proyectos from "./proyectos";
+import Projects from "./projects";
 
 
 
@@ -26,7 +26,7 @@ export default function Container(){
             <Presentacion lang={language}/>
             <AboutMe lang={language}/>
             <TechStack theme={Dark} lang={language}/>
-            <Proyectos lang={language}/>
+            <Projects lang={language}/>
         </div>
     )
 }

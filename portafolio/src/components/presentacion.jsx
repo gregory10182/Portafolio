@@ -38,7 +38,7 @@ export default function Presentacion({ lang }) {
     <motion.div 
       className="Presentacion"
       initial="offScreen"
-      whileInView="onScreen"
+      animate="onScreen"
       transition={{
         staggerChildren: 1,
       }}
@@ -67,7 +67,7 @@ export default function Presentacion({ lang }) {
       <motion.div
         className="contacts"
         initial="offScreen"
-        whileInView="onScreen"
+        animate="onScreen"
         transition={{
           staggerChildren: 0.5,
           staggerDirection: -1,

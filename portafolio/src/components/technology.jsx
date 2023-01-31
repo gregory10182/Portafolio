@@ -16,12 +16,11 @@ export default function Technology({ source, tech, variants}) {
       }}      
       className="Technology"
       whileHover={{
-        scale: 1.1,
         rotate: 360,
         borderRadius: "20%",
       }}
       transition={{
-        duration: 0.7,
+        duration: 0.8,
         ease: "easeInOut",
       }}
       variants={variants}
@@ -30,39 +29,40 @@ export default function Technology({ source, tech, variants}) {
         src={source}
         variants={{
           hover:{
-            scale: 1.1,
             rotate: -360
           },
           nothover:{
-            scale: 1,
             rotate: 0
           }
         }}
         animate={hover ? "hover" : "nothover"}
         transition={{
-          duration: 0.7,
+          duration: 0.8,
           ease: "easeInOut"
         }}
       />
-      <motion.p
+      <motion.div
+        className="tooltip"
         variants={{
           hover:{
-            visibility: "visible",
             opacity: 1,
-            y: -5
+            y: 0
           },
           nothover:{
-            visibility: "hidden",
             opacity: 0,
+            y: 20
           }
         }}
         animate={hover ? "hover" : "nothover"}
         transition={{
           delay: hover ? 0.6 : 0,
-          duration: 0.3,
+          duration: 0.5,
           ease: "easeInOut"
         }}
-      >{tech}</motion.p>
+      >
+        <p>{tech}</p>
+      
+      </motion.div>
     </motion.div>
   );
 }
