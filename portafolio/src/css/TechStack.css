@@ -1,104 +1,108 @@
 .TechStack {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 100%;
-    padding: 200px 0px;
-    height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+  padding: 200px 0px;
+  height: auto;
+}
+
+.TechStack h1 {
+  font-size: clamp(28px, 3.5vw, 41px);
 }
 
 .TechStack .Stack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
-    gap: 10px;
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+  width: 100%;
 }
 
 .TechStack .Selector {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 50px;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 50px;
 }
 
 .Selector .selection {
-    height: 50px;
-    width: 40%;
-    border-radius: 0;
+  height: 50px;
+  width: 40%;
+  border-radius: 0;
 }
 
 .TechStack .Technology {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 .Technology img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 .Technology .tooltip {
-    opacity: 0;
-    position: absolute;
-    font-weight: 600;
-    border-radius: 5px;
-    bottom: 90px;
-    padding: 5px 10px;
-    width: 100%;
-    font-size: 13px;
+  opacity: 0;
+  position: absolute;
+  font-weight: 600;
+  border-radius: 5px;
+  bottom: 90px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 13px;
 }
 
-.Technology .tooltip p{
-    margin: 0px;
-    text-align: center;
+.Technology .tooltip p {
+  margin: 0px;
+  text-align: center;
 }
 
 .Technology .tooltip::after {
-    content: "";
-    display: block;
-    border-top: 10px solid #00E0D9;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    position: absolute;
-    bottom: -7px;
-    left: calc(50% - 10px);
+  content: "";
+  display: block;
+  border-top: 10px solid #00E0D9;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  position: absolute;
+  bottom: -7px;
+  left: calc(50% - 10px);
 }
 
 
 /* Dark */
 
 .Dark .TechStack .selection {
-    background-color: #15273B;
-    color: #DADCE7;
-    border-bottom: 2px solid #CED1DF;
+  background-color: #15273B;
+  color: #DADCE7;
+  border-bottom: 2px solid #CED1DF;
 }
 
-.Dark .TechStack .Technology{
-    border: 4px solid #00E0D9;
+.Dark .TechStack .Technology {
+  border: 4px solid #00E0D9;
 }
 
-.Dark .TechStack .Technology .tooltip{
-    background: #00E0D9;
+.Dark .TechStack .Technology .tooltip {
+  background: #00E0D9;
 }
 
-.Dark .TechStack .Technology .tooltip p{
-    color: #15273B;
+.Dark .TechStack .Technology .tooltip p {
+  color: #15273B;
 }
 
 
-.Dark .TechStack .Technology .tooltip::after{
-    border-top: 10px solid #00E0D9;
+.Dark .TechStack .Technology .tooltip::after {
+  border-top: 10px solid #00E0D9;
 }
 
 
@@ -106,76 +110,75 @@
 /* Light */
 
 .Light .TechStack .selection {
-    background-color: #DADCE7;
-    color: #15273B;
-    border-bottom: 2px solid #CED1DF;
+  background-color: #DADCE7;
+  color: #15273B;
+  border-bottom: 2px solid #CED1DF;
 }
 
-.Light .TechStack .Technology{
-    border: 4px solid #305988;
+.Light .TechStack .Technology {
+  border: 4px solid #305988;
 }
 
-.Light .TechStack .Technology .tooltip{
-    background: #305988;
-    color: #DADCE7;
+.Light .TechStack .Technology .tooltip {
+  background: #305988;
+  color: #DADCE7;
 }
 
-.Light .TechStack .Technology .tooltip::after{
-    border-top: 10px solid #305988;
+.Light .TechStack .Technology .tooltip::after {
+  border-top: 10px solid #305988;
 }
 
 
 @media only screen and (min-width: 768px) {
-    
-    .TechStack .Technology {
-        width: 85px;
-        height: 85px;
-    }
 
-    .Technology .tooltip{
-        bottom: 94px;
-    }
+  .TechStack .Technology {
+    width: 85px;
+    height: 85px;
   }
 
+  .Technology .tooltip {
+    bottom: 94px;
+  }
+}
 
-  @media only screen and (min-width: 1024px) {
-    
-    .TechStack .Technology {
-        width: 90px;
-        height: 90px;
-    }
 
-    .Technology .tooltip{
-        bottom: 98px;
-    }
-  
+@media only screen and (min-width: 1024px) {
+
+  .TechStack .Technology {
+    width: 90px;
+    height: 90px;
   }
 
-
-  @media only screen and (min-width: 1440px) {
-    
-    .TechStack .Technology {
-        width: 95px;
-        height: 95px;
-    }
-
-    .Technology .tooltip{
-        bottom: 103px;
-    }
-  
+  .Technology .tooltip {
+    bottom: 98px;
   }
 
+}
 
-  @media only screen and (min-width: 1920px) {
-    
-    .TechStack .Technology {
-        width: 100px;
-        height: 100px;
-    }
 
-    .Technology .tooltip{
-        bottom: 108px;
-    }
-  
+@media only screen and (min-width: 1440px) {
+
+  .TechStack .Technology {
+    width: 95px;
+    height: 95px;
   }
 
+  .Technology .tooltip {
+    bottom: 103px;
+  }
+
+}
+
+
+@media only screen and (min-width: 1920px) {
+
+  .TechStack .Technology {
+    width: 100px;
+    height: 100px;
+  }
+
+  .Technology .tooltip {
+    bottom: 108px;
+  }
+
+}

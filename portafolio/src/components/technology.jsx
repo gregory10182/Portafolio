@@ -1,13 +1,17 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function Technology({ source, tech, variants}) {
 
   const [hover, sethover] = useState(false)
 
+  useEffect(() => {
+    console.log(hover)
+  }, [hover])
+
   return (
-    <motion.div 
+    <motion.div
       onHoverStart={() =>{
         sethover(true)
       }}

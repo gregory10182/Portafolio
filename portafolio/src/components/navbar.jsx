@@ -1,25 +1,24 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import '../css/Navbar.css'
+import "../css/Navbar.css";
 
 export default function Navbar({ setTheme, setLanguage }) {
   const [darkTheme, setDarkTheme] = useState();
   const [visible, setVisible] = useState(false);
-  const [lang, setLang] = useState()
+  const [lang, setLang] = useState();
 
   useEffect(() => {
     const ThemeState = localStorage.getItem("theme") === "true";
     setDarkTheme(ThemeState);
 
-    const language = localStorage.getItem('lang')
+    const language = localStorage.getItem("lang");
 
-    if(!language){
+    if (!language) {
       setLang("en");
-      localStorage.setItem('lang', "en");
-    }
-    else{
-      setLang(language)
+      localStorage.setItem("lang", "en");
+    } else {
+      setLang(language);
     }
   }, []);
 
@@ -32,12 +31,8 @@ export default function Navbar({ setTheme, setLanguage }) {
     setLanguage(lang);
   }, [lang]);
 
-  
-
   return (
-    <div
-      className="Navbar"
-    >
+    <div className="Navbar">
       <div
         className="MenuResponsive"
         onClick={() => {
@@ -49,11 +44,11 @@ export default function Navbar({ setTheme, setLanguage }) {
           variants={{
             open: {
               rotate: 48,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
             closed: {
               rotate: 0,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
           }}
           animate={visible ? "open" : "closed"}
@@ -67,17 +62,16 @@ export default function Navbar({ setTheme, setLanguage }) {
           variants={{
             open: {
               scaleX: 0,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
             closed: {
               scaleX: 1,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
           }}
           animate={visible ? "open" : "closed"}
           transition={{
             duration: visible ? 0.1 : 0.4,
-            
           }}
         />
 
@@ -86,11 +80,11 @@ export default function Navbar({ setTheme, setLanguage }) {
           variants={{
             open: {
               rotate: -48,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
             closed: {
               rotate: 0,
-              transformOrigin: "left"
+              transformOrigin: "left",
             },
           }}
           animate={visible ? "open" : "closed"}
@@ -116,45 +110,47 @@ export default function Navbar({ setTheme, setLanguage }) {
             key="sideNavBar"
             initial={{ x: -140 }}
             animate={"open"}
-            exit={{ x: -140, opacity: 0}}
+            exit={{ x: -140, opacity: 0 }}
             transition={{
               duration: 0.5,
               // delay: visible ? 0.4 : 0,
             }}
           >
             <nav>
-              <a href="#">{lang === 'en' ? 'About' : 'Sobre Mi'}</a>
-              <a href="#">{lang === 'en' ? 'Experience' : 'Experiencia'}</a>
-              <a href="#">{lang === 'en' ? 'Work' : 'Trabajo'}</a>
-              <a href="#">{lang === 'en' ? 'Contact' : 'Contacto'}</a>
+              <a href="#">{lang === "en" ? "About" : "Sobre Mi"}</a>
+              <a href="#">{lang === "en" ? "Experience" : "Experiencia"}</a>
+              <a href="#">{lang === "en" ? "Work" : "Trabajo"}</a>
+              <a href="#">{lang === "en" ? "Contact" : "Contacto"}</a>
             </nav>
-            
+
             <button
               onClick={() => {
                 setDarkTheme(!darkTheme);
-                localStorage.setItem('theme', !darkTheme)
+                localStorage.setItem("theme", !darkTheme);
               }}
             >
               <img
                 className="themeIcon"
-                src={ darkTheme ? "https://cdn-icons-png.flaticon.com/512/66/66275.png" : "https://cdn-icons-png.flaticon.com/512/4489/4489231.png"}
+                src={
+                  darkTheme
+                    ? "https://cdn-icons-png.flaticon.com/512/66/66275.png"
+                    : "https://cdn-icons-png.flaticon.com/512/4489/4489231.png"
+                }
               ></img>
             </button>
 
             <button
               onClick={() => {
-                if(lang === 'en'){
-                  setLang('es')
-                  localStorage.setItem('lang', 'es')
+                if (lang === "en") {
+                  setLang("es");
+                  localStorage.setItem("lang", "es");
+                } else {
+                  setLang("en");
+                  localStorage.setItem("lang", "en");
                 }
-                else{
-                  setLang('en')
-                  localStorage.setItem('lang', 'en')
-                }
-                
               }}
             >
-              {lang === 'en' ? 'es' : 'en'}
+              {lang === "en" ? "es" : "en"}
             </button>
           </motion.div>
         )}

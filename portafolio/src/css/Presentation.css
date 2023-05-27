@@ -1,6 +1,6 @@
 .Presentacion {
   width: 100%;
-  padding: 250px 0px;
+  margin: 250px 0px;
 }
 
 .Presentacion .Name {
@@ -80,23 +80,7 @@
 
 
 
-/* @media only screen and (min-width: 768px) {
-
-  .Presentacion h1 {
-    font-size: 33px;
-  }
-
-  .Presentacion .Name{
-    font-size: 39px;
-  }
-
-  .Presentacion h3{
-    font-size: 22px;
-  }
-
-  .Presentacion p{
-    font-size: 20px;
-  }
+@media only screen and (min-width: 768px) {
 
   .Presentacion .contact {
     height: 30px;
@@ -107,23 +91,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-
-  .Presentacion h1 {
-    font-size: 37px;
-  }
-
-  .Presentacion .Name{
-    font-size: 43px;
-  }
-
-  .Presentacion h3{
-    font-size: 26px;
-  }
-
-  .Presentacion p{
-    padding-right: 50px;
-    font-size: 26px;
-  }
 
   .Presentacion .contacts {
     justify-content: flex-start;
@@ -138,11 +105,7 @@
 
 }
 
-/* @media only screen and (min-width: 1440px) {
-
-  .Presentacion p{
-    padding-right: 270px;
-  }
+@media only screen and (min-width: 1440px) {
 
   .Presentacion .contacts {
     column-gap: 100px;
@@ -151,23 +114,6 @@
 } 
 
 @media only screen and (min-width: 1920px) {
-
-  .Presentacion h1 {
-    font-size: 41px;
-  }
-
-  .Presentacion .Name{
-    font-size: 47px;
-  }
-
-  .Presentacion h3{
-    font-size: 30px;
-  }
-
-  .Presentacion p{
-    font-size: 30px;
-    line-height: 30px;
-  }
 
   .Presentacion .contacts {
     column-gap: 110px;
@@ -179,4 +125,4 @@
   }
 
 
-} */
+}

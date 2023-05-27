@@ -20,29 +20,34 @@
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  height: 350px;
+  row-gap: 10px;
+  height: 340px;
   width: 100%;
   background-color: #203b5b;
-  border-radius: 10%;
-  padding: 10px;
+  border-radius: 5%;
+  padding: 20px;
 }
 
 
 .Project h2 {
   width: 100%;
+  height: 7%;
+  margin: 0;
   text-align: center;
 }
 
 .Project p{
   width: 100%;
+  height: 55%;
   margin: 0;
 }
 
 .Project .Technologies{
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
-  height: 50px;
+  height: 20%;
 }
 
 .Project .Technology {
@@ -59,7 +64,7 @@
 .Project .Technology img {
   width: 20px;
   height: 20px;
-  object-fit: cover;
+  object-fit:contain;
 }
 
 .Project .Technology .tooltip {
@@ -84,12 +89,17 @@
   align-items: center;
   gap: 60px;
   width: 100%;
-  height: 40px;
+  height: 8%;
+}
+
+.Project .Links a{
+  height: 20px;
+  width: 20px;
 }
 
 .Project .Links img{
-  height: 20px;
-  width: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -162,6 +172,11 @@
 
   .Project{
     width: 350px;
+    height: 300px;
+  }
+
+  .Project p{
+    height: 45%;
   }
 }
 
@@ -176,7 +191,11 @@
 @media only screen and (min-width: 1440px) {
 
   .Project{
-    width: 250px;
+    width: 320px;
+  }
+
+  .Project p{
+    height: 50%;
   }
 }
 
