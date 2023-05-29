@@ -51,10 +51,15 @@ export default function Presentacion({ lang }) {
       <motion.h1 variants={Apresentation}>
         {lang === "en" ? "Software Engineer" : "Ingeniero de Software"}
       </motion.h1>
-      <motion.p variants={Apresentation}>
+      {/* <motion.p variants={Apresentation}>
         {lang === "en"
           ? "Im a recently graduated software engineer web development oriented and passioned for the internet of things"
           : "Recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)"}
+      </motion.p> */}
+      <motion.p variants={Apresentation}>
+        {lang === "en"
+          ? "Recently graduated from the Politécnico Grancolombiano University. I specialize in frontend web programming with knowledge of backend. Eager to apply my skills and knowledge to challenging and exciting projects"
+          : "Recien graduado de la Universidad Politécnico Grancolombiano. Me especializo en programación web frontend con conocimientos de backend. Ansioso por aplicar mis habilidades y conocimientos en proyectos desafiantes y emocionantes"}
       </motion.p>
       <motion.div
         className="contacts"
@@ -66,24 +71,33 @@ export default function Presentacion({ lang }) {
           delayChildren: 1.7,
         }}
       >
-        <motion.img
-          className="contact"
-          variants={logosanimation}
-          src="https://cdn-icons-png.flaticon.com/512/3800/3800073.png"
-          alt=""
-        />
-        <motion.img
-          className="contact"
-          variants={logosanimation}
-          src="https://cdn-icons-png.flaticon.com/512/1240/1240971.png"
-          alt=""
-        />
-        <motion.img
-          className="contact"
-          variants={logosanimation}
-          src="https://cdn-icons-png.flaticon.com/128/1944/1944250.png"
-          alt=""
-        />
+        <a href="https://www.linkedin.com/in/gregory-jos%C3%A9-p%C3%A9rez-fern%C3%A1ndez-a509a8260/" target="_blank">
+          <motion.img
+            className="contact"
+            variants={logosanimation}
+            src="https://cdn-icons-png.flaticon.com/512/3800/3800073.png"
+            alt=""
+          />
+        </a>
+
+        <a href="https://github.com/gregory10182" target="_blank">
+          <motion.img
+            className="contact"
+            variants={logosanimation}
+            src="https://cdn-icons-png.flaticon.com/512/1240/1240971.png"
+            alt=""
+          />
+        </a>
+
+        <a href="mailto:Gregory10183@gmail.com" target="_blank">
+          <motion.img
+            className="contact"
+            variants={logosanimation}
+            src="https://cdn-icons-png.flaticon.com/128/1944/1944250.png"
+            alt=""
+          />
+        </a>
+
       </motion.div>
     </motion.div>
   );
