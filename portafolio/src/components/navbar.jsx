@@ -117,10 +117,9 @@ export default function Navbar({ setTheme, setLanguage }) {
             }}
           >
             <nav>
-              <a href="#">{lang === "en" ? "About" : "Sobre Mi"}</a>
-              <a href="#">{lang === "en" ? "Experience" : "Experiencia"}</a>
-              <a href="#">{lang === "en" ? "Work" : "Trabajo"}</a>
-              <a href="#">{lang === "en" ? "Contact" : "Contacto"}</a>
+              <a href="#aboutMe">{lang === "en" ? "About" : "Sobre Mi"}</a>
+              <a href="#TechStack">{lang === "en" ? "Technologies" : "Tecnologias"}</a>
+              <a href="#Projects">{lang === "en" ? "Projects" : "Proyectos"}</a>
             </nav>
 
             <button

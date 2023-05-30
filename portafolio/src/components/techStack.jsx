@@ -37,7 +37,7 @@ export default function TechStack({ theme, lang }) {
   };
 
   return (
-    <div className="TechStack">
+    <div className="TechStack" id="TechStack">
       <h1>{lang === "en" ? "Technologies" : "Tecnologias"}</h1>
       <div className="Selector">
         <motion.button

@@ -5,7 +5,7 @@ import "../css/Projects.css";
 
 export default function Projects() {
   return (
-    <motion.div className="Projects">
+    <motion.div className="Projects" id="Projects">
       <h1>Proyectos</h1>
       <div className="Project">
         <h2>Pokedex</h2>
