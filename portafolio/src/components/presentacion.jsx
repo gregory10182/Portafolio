@@ -54,7 +54,7 @@ export default function Presentacion({ lang }) {
       </motion.h1>
       <motion.p variants={Apresentation}>
         {lang === "en"
-          ? "Recently graduated from the Politécnico Grancolombiano University. I specialize in frontend web programming with knowledge of backend. Eager to apply my skills and knowledge to challenging and exciting projects."
+          ? "Recently graduated from the Universidad Politécnico Grancolombiano, I specialize in web frontend programming with backend knowledge. Eager to apply my skills and knowledge in challenging and exciting projects."
           : "Recien egresado de la Universidad Politécnico Grancolombiano, me especializo en programación web frontend con conocimientos de backend. Ansioso por aplicar mis habilidades y conocimientos en proyectos desafiantes y emocionantes."}
       </motion.p>
       <motion.div
