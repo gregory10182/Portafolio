@@ -49,18 +49,13 @@ export default function Presentacion({ lang }) {
       <motion.h1 className="Name" variants={Apresentation}>
         Gregory Pérez F.
       </motion.h1>
-      <motion.h1 variants={Apresentation}>
+      <motion.h1 className="Career" variants={Apresentation}>
         {lang === "en" ? "Software Engineer" : "Ingeniero de Software"}
       </motion.h1>
-      {/* <motion.p variants={Apresentation}>
-        {lang === "en"
-          ? "Im a recently graduated software engineer web development oriented and passioned for the internet of things"
-          : "Recien egresado de la carrera de ingenieria de software orientado al desarrollo web fullstack y apasionado por el internet de las cosas (IOT)"}
-      </motion.p> */}
       <motion.p variants={Apresentation}>
         {lang === "en"
-          ? "Recently graduated from the Politécnico Grancolombiano University. I specialize in frontend web programming with knowledge of backend. Eager to apply my skills and knowledge to challenging and exciting projects"
-          : "Recien graduado de la Universidad Politécnico Grancolombiano. Me especializo en programación web frontend con conocimientos de backend. Ansioso por aplicar mis habilidades y conocimientos en proyectos desafiantes y emocionantes"}
+          ? "Recently graduated from the Politécnico Grancolombiano University. I specialize in frontend web programming with knowledge of backend. Eager to apply my skills and knowledge to challenging and exciting projects."
+          : "Recien egresado de la Universidad Politécnico Grancolombiano, me especializo en programación web frontend con conocimientos de backend. Ansioso por aplicar mis habilidades y conocimientos en proyectos desafiantes y emocionantes."}
       </motion.p>
       <motion.div
         className="contacts"

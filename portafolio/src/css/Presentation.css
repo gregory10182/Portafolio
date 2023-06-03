@@ -21,7 +21,7 @@
 
 .Presentacion h3 {
   text-align: left;
-  font-size: clamp(17px, 1.5vw, 24px);
+  font-size: clamp(16px, 2vw, 30px);
   margin: 8px 0px;
 }
 
@@ -52,6 +52,10 @@
 
 .Dark h1 {
   color: #00E0D9;
+}
+
+.Dark .Career {
+  color: #00A39E;
 }
 
 .Dark h3 {
