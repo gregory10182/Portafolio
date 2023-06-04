@@ -17,7 +17,6 @@ export default function Technology({ source, tech, variants}) {
 
     return() => {
       window.removeEventListener('resize', handleResize)
-      console.log(width)
     }
 
 

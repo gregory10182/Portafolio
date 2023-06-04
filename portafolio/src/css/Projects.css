@@ -129,6 +129,10 @@
   border: 3px solid #00E0D9;
 }
 
+.Dark .Project .Technology .Techname{
+  color: #00E0D9;
+}
+
 .Dark .Project .Technology .tooltip{
   background: #00E0D9;
 }
@@ -158,6 +162,10 @@
 
 .Light .Project .Technology{
   border: 3px solid #305988;
+}
+
+.Light .Project .Technology .Techname{
+  color: #305988;
 }
 
 .Light .Project .Technology .tooltip{
