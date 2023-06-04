@@ -93,11 +93,11 @@ export default function Projects({lang}) {
           />
           <Technology
             source="https://img.icons8.com/office/2x/express-js.png"
-            tech="Express.JS"
+            tech="Express"
           />
           <Technology
             source="https://img.icons8.com/external-tal-revivo-color-tal-revivo/2x/external-mongodb-a-cross-platform-document-oriented-database-program-logo-color-tal-revivo.png"
-            tech="React"
+            tech="MongoDB"
           />
         </div>
         <div className="Links">

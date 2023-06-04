@@ -1,15 +1,27 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
 import { motion } from "framer-motion";
 
 export default function Technology({ source, tech, variants}) {
 
   const [hover, sethover] = useState(false)
+  const [width, setWidth] = useState(window.innerWidth)
 
   useEffect(() => {
-    console.log(hover)
-  }, [hover])
 
+    const handleResize = () => {
+      setWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize);
+
+    return() => {
+      window.removeEventListener('resize', handleResize)
+      console.log(width)
+    }
+
+
+  })
   return (
     <motion.div
       onHoverStart={() =>{
@@ -17,7 +29,7 @@ export default function Technology({ source, tech, variants}) {
       }}
       onHoverEnd={() =>{
         sethover(false)
-      }}      
+      }}
       className="Technology"
       whileHover={{
         rotate: 360,
@@ -45,28 +57,35 @@ export default function Technology({ source, tech, variants}) {
           ease: "easeInOut"
         }}
       />
+
+      {width < 1024 ? (
+        <p className="Techname">{tech}</p>
+      )
+    :
+    (
       <motion.div
-        className="tooltip"
-        variants={{
-          hover:{
-            opacity: 1,
-            y: 0
-          },
-          nothover:{
-            opacity: 0,
-            y: 20
-          }
-        }}
-        animate={hover ? "hover" : "nothover"}
-        transition={{
-          delay: hover ? 0.6 : 0,
-          duration: 0.5,
-          ease: "easeInOut"
-        }}
-      >
-        <p>{tech}</p>
-      
-      </motion.div>
+      className="tooltip"
+      variants={{
+        hover:{
+          opacity: 1,
+          y: 0
+        },
+        nothover:{
+          opacity: 0,
+          y: 20
+        }
+      }}
+      animate={hover ? "hover" : "nothover"}
+      transition={{
+        delay: hover ? 0.6 : 0,
+        duration: 0.5,
+        ease: "easeInOut"
+      }}
+    >
+      <p>{tech}</p>
+    
+    </motion.div>
+    )}
     </motion.div>
   );
 }

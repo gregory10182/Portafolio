@@ -67,6 +67,12 @@
   object-fit:contain;
 }
 
+.Project .Technology .Techname{
+  top: 45px;
+  font-size: 8px;
+  width: max-content;
+}
+
 .Project .Technology .tooltip {
   opacity: 0;
   position: absolute;
